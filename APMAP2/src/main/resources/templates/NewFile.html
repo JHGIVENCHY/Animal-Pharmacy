@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html 	lang="ko" 
+        xmlns="http://www.w3.org/1999/xhtml" 
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>paging</title>
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	</head>
+<body>
+ 
+<table class="table table-striped">
+  
+  <tbody>
+    <tr th:each="board : ${boardList}">
+      <th scope="row" th:text="${boardStat.index + 1}">1</th> <!-- no 1 ... 2... 3 -->
+      <td th:text="${board.title}"></td>
+      <td th:text="${board.user}"></td>
+    </tr>
+  </tbody>
+</table>
+
+// paging button
+<nav aria-label="Page navigation example ">
+  <ul class="pagination">
+  <li class="page-item">
+      <a class="page-link" th:href="@{/?page=1}" aria-label="Previous">
+        <span aria-hidden="true">처음</span>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" th:href="@{/?page={page} (page = ${pagination.prevBlock})}" aria-label="Previous">
+        <span aria-hidden="true">이전</span>
+      </a>
+    </li>
+    <th:block  th:with="start = ${pagination.startPage}, end = ${pagination.endPage}">
+	    <li class="page-item" 
+	    		 th:with="start = ${pagination.startPage}, end = ${pagination.endPage}"
+	    		th:each="pageButton : ${#numbers.sequence(start, end)}">
+	    		<a class="page-link" th:href="@{/?page={page} (page = ${pageButton})}" th:text=${pageButton}></a>
+	    </li>
+    </th:block>
+    <li class="page-item">
+      <a class="page-link" th:href="@{?page={page} (page = ${pagination.nextBlock})}" aria-label="Next">
+        <span aria-hidden="true">다음</span>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" th:href="@{?page={page} (page = ${pagination.totalPageCnt})}" aria-label="Previous">
+        <span aria-hidden="true">끝</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+</body>
+</html>

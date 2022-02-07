@@ -1,0 +1,325 @@
+@charset "UTF-8";
+body{
+	/* font-family: 'Noto Sans KR', sans-serif; */
+}
+/* 제목 */
+.title {
+	font-size:30px; 
+	text-align:center;
+	font-weight:bold; 
+	font-family: 'Noto Sans KR', sans-serif;
+	color:white;
+	margin-left: 40px;
+	line-height: 70px;
+}
+header { 
+	background-image: url('/img/mapBG.png');
+	text-align:left;
+	width: 408px;
+	height: 80px;
+}
+header > a { text-decoration:none !important; }
+header > a:hover { text-decoration:none !important }
+header > button { 
+	color: white; 
+	background-color:#85ac33; 
+	padding:0px 10px 0px 10px; 
+	font-size:25px; 
+	border:none; 
+	cursor:pointer;
+	margin-left:5px;
+	}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*sidebar*/
+#sidebar {
+    width: 365px;
+    position: fixed;
+    top: 0;
+    left: -365px;
+    height: 100vh;
+    z-index: 999;
+    /* background:#85ac33; */
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background:#85ac33;
+    font-size:25px;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-left:10px;
+}
+
+#dismiss:hover {
+    background: #5A7424;
+}
+
+#sidebar {
+    padding: 10px 0px 20px 0px;
+    background:#85ac33;
+    font-weight:bold; 
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sidebar-header {
+	margin-left : 50px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul{
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+	color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #5A7424;
+    text-decoration:none;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #5A7424
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #fff;
+}
+
+/* 지도 프레임 */
+#map {
+	overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 407px;
+    right: 0;
+    z-index: 0;
+}
+/* 검색창 프레임 */
+#search {
+	position:relative;
+	width:408px;
+	float: left;
+}
+#search hr{
+	margin-top:30px;
+}
+
+/* 검색폼. */
+#form1 {
+	
+	margin: 8px;
+	margin-top: 20px; 
+}
+/* 시군구 선택 */
+#select1 {
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-top: 10px;
+	width: 390px;
+	height: 40px;
+	font-size: 12pt;
+	border-radius: 5px;
+}
+/* 검색어 입력창 */
+#input1 {
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-top: 10px;
+	width: 320px;
+	height: 40px;
+	font-size: 12pt;
+	border-radius: 5px;
+	border-width: thin;
+}
+/* 검색버튼 */
+#input2 {
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color: #3498DB;
+	border-color: #3498DB;
+	margin-top: 20px;
+	margin-left: 10px;
+	width: 53px;
+	height: 40px;
+	color: white;
+	border-radius: 5px;
+	font-size: 12;
+}
+/* 검색버튼 마우스오버 이벤트. */
+#input2:hover {
+	cursor: pointer;
+}
+/* 검색결과. */
+#info {
+    float: left;
+    position: relative;
+    width: 407px;
+    height: 680px;
+    overflow-x: hidden;
+	overflow-y: auto; 
+    clear: both;
+}
+#info1 {
+	position: relative;
+	/* height: 760px; */
+	clear: both;
+}
+#info4 div{
+	margin-top: 10px;
+}
+#info4{
+	padding-left: 8px;
+	padding-right: 8px;
+}
+#info4:hover {
+	background-color: #eef7ff;
+}
+/*------------- 페이징 부분. */
+#info5 {
+	position: relative;
+	margin-top: 30px;
+	text-align: center;
+}
+#info5 a{
+	text-decoration:none;
+	color: black;
+	padding: 5px;
+}
+.active2 {
+	font-weight: bold;
+	border: 1px solid;
+	border-color: black;
+	border-radius: 4px;
+	
+}
+/* ------------------------ */
+
+#info2 {
+	margin:10px;
+	font-size: 10pt;
+}
+/* 리스트 */
+#a1 {
+	color: black;
+	text-decoration:none;
+	font-weight: bold;
+	font-size: 15pt;
+}
+#a1:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+#div5, #div6{
+	font-size: 10pt;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+/* 별점 */
+.star-ratings {
+	color: #aaa9a9; 
+	position: relative;
+	unicode-bidi: bidi-override;
+	width: max-content;
+	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1.3px;
+	-webkit-text-stroke-color: #2b2a29;
+}
+ 
+.star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
+}
+ 
+.star-ratings-base {
+  z-index: 0;
+  padding: 0;
+}
+#div11{
+	padding: 3px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	width: 150px;
+}
+/* 마커클릭 페이지. */
+#div10{
+	margin :10px;
+	width: 100%;
+}
+#div10 a{
+	font-size: 14px;
+	color : black;
+	text-decoration:none;
+	font-weight: bold;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#div10 a:hover{
+	text-decoration: underline;
+}
+#div9{
+	margin-left: 80px;
+	margin-top: -20px;
+	font-size : 10pt;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#div7{
+	margin-top : 5px;
+	font-size : 10pt;
+	font-family: 'Noto Sans KR', sans-serif;
+} 
+#div8{
+	font-size : 10pt;
+	font-family: 'Noto Sans KR', sans-serif;
+}
