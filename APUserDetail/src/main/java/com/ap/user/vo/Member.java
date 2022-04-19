@@ -3,7 +3,6 @@ package com.ap.user.vo;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
 import com.ap.user.validation.FieldMatch;
 
@@ -15,8 +14,6 @@ import lombok.Data;
 @FieldMatch(first = "mb_pw", second = "mb_pw_confirm", message = "입력하신 비밀번호와 일치하지 않습니다")
 public class Member {
 	
-	@NotBlank(message = "아이디를 입력해주세요")
-	@Size(min = 5, max = 15, message = "5자~15자로 입력해주세요")
 	private String mb_id;
 	
 	@NotBlank(message = "비밀번호를 입력해주세요")

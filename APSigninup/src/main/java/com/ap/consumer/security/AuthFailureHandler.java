@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AuthFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
-	 private final String DEFAULT_FAILURE_URL = "/loginForm?error=true&exception=";
+	 private final String DEFAULT_FAILURE_URL = "http://localhost:8000/log/loginForm?error=true&exception=";
 
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,

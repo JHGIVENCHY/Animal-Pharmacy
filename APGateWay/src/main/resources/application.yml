@@ -1,0 +1,43 @@
+
+eureka:
+  devtools:
+    livereload:
+      enabled: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+      #시작시, 로그아웃, 로그인페이지 내에서
+        -  id: AP-LOGIN-SERVICE
+           uri: lb://AP-LOGIN-SERVICE
+           predicates:
+             - Path=/, /logout, /log/**
+      #마이페이지       
+        -  id: AP-MYPAGE
+           uri: lb://ap-user-detail
+           predicates:
+             - Path=/mypage, /mypage/**
+      #맵페이지
+        -  id: AP-MAP-SERVICE-1
+           uri: lb://AP-MAP-SERVICE
+           predicates:
+             - Path=/map/**
+           #filters:
+             #- RewritePath=/map/?(?<segment>.*), /$\{segment} 
+                # RewritePath로 재가공하는 방법 입력값,바꿀값
+      #상세페이지
+        -  id: AP-DETAILPAGE-SERVICE-1
+           uri: lb://AP-DETAILPAGE-SERVICE
+           predicates:
+             - Path=/star/**
+           #filters:
+           #  - RewritePath=/star/?(?<segment>.*), /$\{segment} 
+server:
+  port: 8000

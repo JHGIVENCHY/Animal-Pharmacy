@@ -60,7 +60,15 @@ header > a:hover { text-decoration:none !important }
 	border-radius:3px;
 	margin-bottom:15px;
 }
-
+p{
+	width: auto;
+    height: auto;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: red;
+    margin: 0px;
+    margin-top: -10px;
+}
 .mypageForm input:focus {
 	border: 0.5px solid #fff;
 }

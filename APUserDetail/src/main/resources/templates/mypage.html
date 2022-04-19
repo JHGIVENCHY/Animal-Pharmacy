@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <title>동물약국🐶🐱🐹 > 마이페이지</title>
 <!--로컬CSS파일-->
-<link th:href="@{/css/mypage.css}" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" th:href="@{http://localhost:8182/css/mypage.css}">
 <!--구글폰트API-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <!--배경설정style-->
 <style th:inline="text">
-	body { background : url([[@{/img/bg_green_small.png}]]) no-repeat, #85ac33; }
+	body { background : url([[@{http://localhost:8180/img/bg_green_small.png}]]) no-repeat, #85ac33; }
 </style>
 </head>
 <body>
 	<header>
-		<a href="/"><span class=title>동물약국🐶🐱🐹</span></a>
+		<a href="/map"><span class=title>동물약국🐶🐱🐹</span></a>
 	</header>
 	
 	<div class=titleInfo>
@@ -24,27 +24,30 @@
 	</div>
 	
 	<div class=mypageForm>
-		<form th:action="@{/}" method="post">
+		<form th:action="@{/mypage/changePw}" th:object=${member} method="post">
 			<label for="mb_id">아이디</label><br>
-			<input type="text" placeholder="ID" disabled><br>
+			<input type="text" name="mb_id" placeholder="ID" th:value="${mb_id}" disabled><br>
 			
 			<label for="mb_pw">비밀번호</label><br>
-			<input type="password" placeholder="PASSWORD"><br>
+			<input type="password" th:field=*{mb_pw} name="mb_pw" placeholder="PASSWORD" ><br>
+			<p class="error-message" th:each="error : ${#fields.errors('mb_pw')}" th:text="${error}">error</p>
 			
 			<label for="mb_pw_confirm">비밀번호 확인</label><br>
-			<input type="password" placeholder="PASSWORD CONFIRM"><br>
+			<input type="password" th:field=*{mb_pw_confirm} name="mb_pw_confirm" placeholder="PASSWORD CONFIRM"><br>
+			<p class="error-message" th:each="error : ${#fields.errors('mb_pw_confirm')}" th:text="${error}">error</p>
 			
 			<label for="mb_name">이름</label><br>
-			<input type="text" placeholder="NAME"><br>
+			<input type="text" th:field=*{mb_name} name="mb_name" placeholder="NAME"><br>
+			<p class="error-message" th:each="error : ${#fields.errors('mb_name')}" th:text="${error}">error</p>
 			
 			<label for="mb_email">이메일</label><br>
-			<input type="email" placeholder="EMAIL"><br>
+			<input type="email" th:field=*{mb_email} name="mb_email" placeholder="EMAIL"><br>
+			<p class="error-message" th:each="error : ${#fields.errors('mb_email')}" th:text="${error}">error</p>
 			
 			<button type="submit" class="btnInfoEdit">정보 수정</button>
 			<br>
 			<button type="button" onclick="location.href='/'" class="btnCancel">취소</button>
 		</form>
-		
 	</div>
 </body>
 </html>

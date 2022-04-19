@@ -9,7 +9,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import com.ap.consumer.service.MemberService;
@@ -29,21 +28,21 @@ public class SignInupController {
 		return "login";
 	}
 	
-	@GetMapping("/loginForm")
-	public String loginForm() {
+	@GetMapping("/log/loginForm")
+	public String loginForm(@Valid@ModelAttribute Member member,BindingResult bResult, Model model) {
 		return "login";
 	}
 	
-	@GetMapping("/signupForm")
+	@GetMapping("/log/signupForm")
 	public String signupForm(Model model) {
-		
+		System.out.println("사인업폼 들어온거확인.");
 		Member member = new Member(null, null, null, null, null);
 		model.addAttribute("member", member);
 		
 		return "signup";
 	}
 	
-	@PostMapping("/signup")
+	@PostMapping("/log/signup")
 	public String signup(@Valid@ModelAttribute Member member,BindingResult bResult, Model model) {
 
 		System.out.println(member.toString());
@@ -60,13 +59,14 @@ public class SignInupController {
 			model.addAttribute("member", member);
 			mService.insertNewAccount(member);
 			
-			return "redirect:loginForm";
+			return "redirect:http://localhost:8000/log/loginForm";
 		}
 	}
-	
-	@GetMapping("/success")
+	@GetMapping("/log/success")
 	public String success() {
-		return "success";
-	}
+		return "success"; 
+		//return "redirect:success";
+		}
+	
 	
 }

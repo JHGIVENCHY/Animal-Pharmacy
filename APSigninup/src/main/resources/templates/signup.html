@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <title>동물약국🐶🐱🐹</title>
 <!--로컬CSS파일-->
-<link th:href="@{/css/signup.css}" rel="stylesheet"/>
+<link th:href="@{http://localhost:8180/css/signup.css}" rel="stylesheet"/>
 <!--구글폰트CDN-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <!--배경설정style-->
 <style th:inline="text">
-	body { background : url([[@{/img/bg_red.png}]]) no-repeat;
+	body { background : url([[@{http://localhost:8180/img/bg_red.png}]]) no-repeat;
 		   background-size : cover; }
 </style>
 </head>
@@ -21,10 +21,9 @@
 	</header>
 	
 	<div class=signupForm>
-		<form th:action="@{/signup}" th:object=${member} method="post">
+		<form th:action="@{/log/signup}" th:object=${member} method="post">
 			<label for="mb_id">아이디</label><br>
 			<input type="text" th:field=*{mb_id} placeholder="ID"><br>
-			<p class="error-message" th:each="error : ${#fields.errors('mb_id')}" th:text="${error}">error</p>
 			
 			<label for="mb_pw">비밀번호</label><br>
 			<input type="password" th:field=*{mb_pw} placeholder="PASSWORD"><br>

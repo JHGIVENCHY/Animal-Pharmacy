@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <title>동물약국🐶🐱🐹</title>
 <!--로컬CSS파일-->
-<link th:href="@{/css/login.css}" rel="stylesheet"/>
+<link th:href="@{http://localhost:8180/css/login.css}" rel="stylesheet"/>
 <!--구글폰트API-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <!--배경설정style-->
 <style th:inline="text">
-	body { background : url([[@{/img/bg_red.png}]]) no-repeat, #e84234; }
+	body { background : url([[@{http://localhost:8180/img/bg_red.png}]]) no-repeat, #e84234; }
 </style>
 </head>
 <body>
@@ -36,12 +36,12 @@
 				(param.exception[0]=='error101') }" role="alert">
 			비활성화 된 계정입니다
 		</span>
-		<span th:if="${(param.error!=null) and (param.error[0] == 'true') and 
+		 <span th:if="${(param.error!=null) and (param.error[0] == 'true') and 
 				(param.exception[0]=='error102') }" role="alert">
 			알 수 없는 이유로 로그인을 실패했습니다.<br> 관리자에게 문의하세요
 		</span>
 	
-		<form th:action="@{/login}" method="post">
+		<form th:action="@{/log/login}" method="post">
 			<label for="login_id">아이디</label><br>
 			<input type="text" name="username" id="login_id" placeholder="ID"><br>
 			
@@ -51,12 +51,12 @@
 			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 			
 			<br>
-			<a href="/findForm" class="find_pw">아이디/비밀번호 찾기</a>
+			<a href="/log/findForm" class="find_pw">아이디/비밀번호 찾기</a>
 			<br>
 			
 			<button type="submit" class="btnLogin">로그인</button>
 			<br>
-			<button type="button" onclick="location.href='/signupForm'" class="btnSignup">회원가입</button>
+			<button type="button" onclick="location.href='/log/signupForm'" class="btnSignup">회원가입</button>
 		</form>
 	</div>
 </body>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ap.consumer.dao.dao">
+	<!-- 조회하면 여러값이 나오는데 필요한건 검색된값의 평점갯수와 평점의 평균이 필요함. 인자는 가게명, 도로명주소사용했음. -->
+	<select id="getsc" resultType="com.ap.consumer.vo.scVO">
+		SELECT  count(rv_score)"TOTAL", round(sum(rv_score)/count(rv_score),2)"RV_SCORE"
+		FROM review
+		where REFINE_ROADNM_ADDR = #{rd}
+		<!-- where BIZPLC_NM = #{nm} AND REFINE_ROADNM_ADDR = #{rd} -->
+	</select>
+</mapper>

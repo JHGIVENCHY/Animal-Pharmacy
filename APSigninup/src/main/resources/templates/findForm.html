@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <title>동물약국🐶🐱🐹</title>
 <!--로컬CSS파일-->
-<link th:href="@{/css/findForm.css}" rel="stylesheet"/>
+<link th:href="@{http://localhost:8180/css/findForm.css}" rel="stylesheet"/>
 <!--구글폰트API-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <!--배경설정style-->
 <style th:inline="text">
-	body { background : url([[@{/img/bg_red.png}]]) no-repeat;
+	body { background : url([[@{http://localhost:8180/img/bg_red.png}]]) no-repeat;
 		   background-size : cover; }
 </style>
 </head>
@@ -27,7 +27,7 @@
 	</div>
 	
 	<div class="findIdForm">
-		<form th:action="@{/findId}" th:object="${idMember}" method="post">
+		<form th:action="@{/log/findId}" th:object="${idMember}" method="post">
 		
 			<label for="mb_name">이름</label><br>
 			<input type="text" th:field="*{mb_name}" placeholder="NAME"><br>
@@ -48,7 +48,7 @@
 	</div>
 	
 	<div class="findPwForm">
-		<form th:action="@{/findPw}" th:object="${pwMember}" method="post">
+		<form th:action="@{/log/findPw}" th:object="${pwMember}" method="post">
 			<label for="mb_id">아이디</label><br>
 			<input type="text" th:field="*{mb_id}" placeholder="ID"><br>
 		

@@ -22,7 +22,7 @@ public class MailServiceImpl implements MailService{
 	@Autowired
 	private JavaMailSender mailSender;
 	
-    private static final String HOST_ADDRESS = "sosj1102n@gmail.com";
+    private static final String HOST_ADDRESS = "kispc1@gmail.com";
 	
     //임시 비밀번호 변경 이메일 생성
 	public MimeMessage createPwChangeEmail(String mb_id, String mb_name, String mb_email) throws Exception {
@@ -76,7 +76,8 @@ public class MailServiceImpl implements MailService{
 	public void sendPwChangeEmail(String mb_id, String mb_name, String mb_email) throws Exception {
 		
 		MimeMessage email = createPwChangeEmail(mb_id, mb_name, mb_email);
-		
+		System.out.println("여기 오는지 확인.");
+		System.out.println(email);
 		try {
 			mailSender.send(email);
 		} catch (MailException e) {

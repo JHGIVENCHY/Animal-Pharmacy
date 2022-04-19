@@ -32,7 +32,7 @@ public class FindIdpwController {
 	MailService mailService;
 	
 	//아이디/비밀번호 찾기 화면
-	@GetMapping("/findForm")
+	@GetMapping("/log/findForm")
 	public String findForm(Model model, HttpServletRequest req) {
 		
 		Member tempMember = new Member(null, null, null, null, null);
@@ -45,7 +45,7 @@ public class FindIdpwController {
 	}
 	
 	//아이디 찾기
-	@PostMapping("/findId")
+	@PostMapping("/log/findId")
 	public String findIdByName(@RequestParam("mb_name") String mb_name,
 							@RequestParam("mb_email") String mb_email,
 							Model model) {
@@ -72,7 +72,7 @@ public class FindIdpwController {
 	}
 	
 	//비밀번호 찾기
-	@PostMapping("/findPw")
+	@PostMapping("/log/findPw")
 	public String findPwByIdAndNameAndMail(@RequestParam("mb_id") String mb_id,
 										@RequestParam("mb_name") String mb_name,
 										@RequestParam("mb_email") String mb_email,
@@ -81,7 +81,6 @@ public class FindIdpwController {
 		
 		Member pwMember = new Member(mb_id, null, null, mb_name, mb_email);
 		int existPW = memberService.findPwByIdAndNameAndEmail(mb_id, mb_name, mb_email);
-		
 		
 		//idForm용 더미데이터
 		Member idMember = new Member(null, null, null, null, null);

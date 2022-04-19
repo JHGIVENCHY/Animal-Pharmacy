@@ -3,6 +3,7 @@ package com.ap.consumer.security;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -21,7 +22,7 @@ public class AuthSuccessHandler implements AuthenticationSuccessHandler{
 	@Autowired
 	MemberService memberService;
 	
-	private final String DEFAULT_SUCCESS_URL = "/success";
+	private final String DEFAULT_SUCCESS_URL = "http://localhost:8000/map";
 
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
@@ -36,7 +37,13 @@ public class AuthSuccessHandler implements AuthenticationSuccessHandler{
 		 session.setAttribute("mb_name", member.getMb_name());
 		 session.setAttribute("mb_email", member.getMb_email());
 		 
+		 Cookie ck1 = new Cookie("mb_id", mb_id);
+		 ck1.setPath("/");
+		 ck1.setMaxAge(60*60); //쿠키 유효기간 60초 * 60 1시간.
+		 response.addCookie(ck1);
 		 response.sendRedirect(DEFAULT_SUCCESS_URL);
+		 
+		 
 	}
 	
 	

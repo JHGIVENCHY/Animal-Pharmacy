@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>동물약국🐶🐱🐹</title>
 <!--로컬CSS파일-->
-<link th:href="@{/css/main.css}" rel="stylesheet"/>
+<link th:href="@{http://localhost:8180/css/main.css}" rel="stylesheet"/>
 <!--구글폰트API-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 <!--배경설정style-->
 <style th:inline="text">
-	body { background : url([[@{/img/bg_green_small.png}]]) no-repeat, #85ac33; }
+	body { background : url([[@{http://localhost:8180/img/bg_green_small.png}]]) no-repeat, #85ac33; }
 </style>
 </head>
 <body>
@@ -43,10 +43,10 @@
                 <a href="/success">홈</a>
             </li>
             <li>
-                <a href="#">마이페이지</a>
+                <a href="/mypage">마이페이지</a>
             </li>
             <li>
-                <a th:href="@{/logout}">로그아웃</a>
+                <a th:href="@{/log/logout}">로그아웃</a>
             </li>
         </ul>
     </nav>
