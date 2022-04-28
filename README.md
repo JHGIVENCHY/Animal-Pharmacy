@@ -12,7 +12,7 @@
 <h2>사용동영상, 사용설명</h2>
 <video src="https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4"></video>
 <hr>
-<h2>로그인페이지</h2>
+<h3>로그인페이지</h3>
 <image src="https://user-images.githubusercontent.com/85157790/165734754-cef648e0-90ee-4740-bb47-432e0c56bea4.png"></image>
 <ul>
   <li> 로그인, 회원가입, 비밀번호찾기 가능하며, 비밀번호 틀릴시 위와같이 표시됩니다.
