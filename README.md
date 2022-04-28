@@ -9,7 +9,7 @@
   <li>해당 약국을 누르면 상세페이지로 이동하고 선택한 약국에 대한 리뷰를 남길 수 있습니다.</li>
 </ul>
 <hr>
-<h2>사용동영상, </h2>
+<h2>사용동영상, 사용설명</h2>
 <video src="https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4"></video>
 <hr>
 <h2>로그인페이지</h2>
