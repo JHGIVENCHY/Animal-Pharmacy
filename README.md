@@ -13,6 +13,7 @@
 <video src="https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4"></video>
 <hr>
 <h2>사용설명</h2>
+<image src="https://user-images.githubusercontent.com/85157790/165734749-e87fcb4f-39d7-4a6f-ab79-dc84e8605cef.png"></image>
 ![2022-04-28 (1)](https://user-images.githubusercontent.com/85157790/165734749-e87fcb4f-39d7-4a6f-ab79-dc84e8605cef.png)
 ![2022-04-28 (2)](https://user-images.githubusercontent.com/85157790/165734754-cef648e0-90ee-4740-bb47-432e0c56bea4.png)
 ![2022-04-28 (3)](https://user-images.githubusercontent.com/85157790/165734757-379cb130-c668-4d69-b42c-b33c52412ea5.png)
