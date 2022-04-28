@@ -15,7 +15,7 @@
 <h2>사용설명</h2>
 <image src="https://user-images.githubusercontent.com/85157790/165734754-cef648e0-90ee-4740-bb47-432e0c56bea4.png"></image>
 <ul>
-  <li> 로그인, 회원가입이 가능하며, 비밀번호 틀릴시 위와같이 표시됩니다.
+  <li> 로그인, 회원가입, 비밀번호찾기 가능하며, 비밀번호 틀릴시 위와같이 표시됩니다.
 </ul>
 <image src="https://user-images.githubusercontent.com/85157790/165734757-379cb130-c668-4d69-b42c-b33c52412ea5.png"></image>
 
