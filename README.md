@@ -18,9 +18,13 @@
   <li> 로그인, 회원가입, 비밀번호찾기 가능하며, 비밀번호 틀릴시 위와같이 표시됩니다.
 </ul>
 <image src="https://user-images.githubusercontent.com/85157790/165734757-379cb130-c668-4d69-b42c-b33c52412ea5.png"></image>
-
+<ul>
+  <li> 회원가입시 위 양식에 맞게 작성해야 합니다. 
+</ul>
 <image src="https://user-images.githubusercontent.com/85157790/165734761-cae3f95b-01ae-4443-80c1-ded29b0c685b.png"></image>
-
+<ol>
+  <li>  
+</ol>
 <image src="https://user-images.githubusercontent.com/85157790/165734763-303bf78a-7db1-48b8-96df-f0f9f8222e8f.png"></image>
 
 <image src="https://user-images.githubusercontent.com/85157790/165734768-2500027c-817d-4e73-b0e6-f1124991393d.png"></image>
