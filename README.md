@@ -22,11 +22,13 @@
   <li> 회원가입시 위 양식에 맞게 작성해야 합니다. 
 </ul>
 <image src="https://user-images.githubusercontent.com/85157790/165734761-cae3f95b-01ae-4443-80c1-ded29b0c685b.png"></image>
-<ol>
-  <li>  
-</ol>
+<ul>
+  <li> DB에 일치하는 정보가 있을시에 아이디를 알려줍니다.
+</ul>
 <image src="https://user-images.githubusercontent.com/85157790/165734763-303bf78a-7db1-48b8-96df-f0f9f8222e8f.png"></image>
-
+<ul>
+  <li> DB에 일치하는 정보가 있을시에 가입시 입력한 메일로 임시비밀번호를 전송합니다.
+</ul>
 <image src="https://user-images.githubusercontent.com/85157790/165734768-2500027c-817d-4e73-b0e6-f1124991393d.png"></image>
 
 <image src="https://user-images.githubusercontent.com/85157790/165734769-2aa9b19a-9a7d-44c8-8f07-4bdccf06cc7f.png"></image>
