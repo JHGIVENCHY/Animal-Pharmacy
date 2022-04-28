@@ -34,11 +34,20 @@
 </ul>
 <hr>
 <image src="https://user-images.githubusercontent.com/85157790/165734768-2500027c-817d-4e73-b0e6-f1124991393d.png"></image>
-
+<ul>
+  <li>로그인후, MyPage에서 아이디외의 정보가 수정 가능합니다.
+</ul>
+<hr>
 <image src="https://user-images.githubusercontent.com/85157790/165734769-2aa9b19a-9a7d-44c8-8f07-4bdccf06cc7f.png"></image>
-
+<ul>
+  <li>로그인후, MyPage에서 아이디외의 정보가 수정 가능합니다.
+</ul>
+<hr>
 <image src="https://user-images.githubusercontent.com/85157790/165734774-911361ab-803d-4d91-939e-966fbf933ad8.png"></image>
-
+<ul>
+  <li>로그인후, MyPage에서 아이디외의 정보가 수정 가능합니다.
+</ul>
+<hr>
 <image src="https://user-images.githubusercontent.com/85157790/165734775-267db95d-e0b7-4045-b528-b3078fcc0111.png"></image>
 <hr>
 <h2>개발환경</h2>
