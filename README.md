@@ -13,10 +13,10 @@
 <video src="https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4"></video>
 <hr>
 <h2>사용설명</h2>
-<image src="https://user-images.githubusercontent.com/85157790/165734749-e87fcb4f-39d7-4a6f-ab79-dc84e8605cef.png"></image>
-
 <image src="https://user-images.githubusercontent.com/85157790/165734754-cef648e0-90ee-4740-bb47-432e0c56bea4.png"></image>
-
+<ul>
+  <li> 로그인, 회원가입이 가능하며, 비밀번호 틀릴시 위와같이 표시됩니다.
+</ul>
 <image src="https://user-images.githubusercontent.com/85157790/165734757-379cb130-c668-4d69-b42c-b33c52412ea5.png"></image>
 
 <image src="https://user-images.githubusercontent.com/85157790/165734761-cae3f95b-01ae-4443-80c1-ded29b0c685b.png"></image>
@@ -40,3 +40,6 @@
 <h2>시스템개요</h2>
 
 <hr>
+<ol>
+  <li>  
+</ol>
