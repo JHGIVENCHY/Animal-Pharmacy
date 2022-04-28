@@ -40,15 +40,18 @@
 <hr>
 <image src="https://user-images.githubusercontent.com/85157790/165734769-2aa9b19a-9a7d-44c8-8f07-4bdccf06cc7f.png"></image>
 <ul>
-  <li>로그인후, MyPage에서 아이디외의 정보가 수정 가능합니다.
+  <li> 왼쪽 목록에서 약국 선택시 해당좌표로 지도가 이동되며, 마커 클릭시 상페정보가 적힌 메모가 표시됩니다. 
 </ul>
 <hr>
 <image src="https://user-images.githubusercontent.com/85157790/165734774-911361ab-803d-4d91-939e-966fbf933ad8.png"></image>
 <ul>
-  <li>로그인후, MyPage에서 아이디외의 정보가 수정 가능합니다.
+  <li> 리뷰 작성,조회 가능하며, DB에 저장된 평점의 합이 계산되어 별점이 표시됩니다.
 </ul>
 <hr>
 <image src="https://user-images.githubusercontent.com/85157790/165734775-267db95d-e0b7-4045-b528-b3078fcc0111.png"></image>
+<ul>
+  <li>로그인후, MyPage에서 아이디외의 정보가 수정 가능합니다.
+</ul>
 <hr>
 <h2>개발환경</h2>
 
