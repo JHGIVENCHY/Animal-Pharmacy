@@ -10,7 +10,7 @@
 </ul>
 <hr>
 <h2>사용동영상</h2>
-https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4
+![my_video](https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4)
 <hr>
 <h2>사용설명</h2>
 
