@@ -57,7 +57,7 @@
 <image src="https://user-images.githubusercontent.com/85157790/165740053-d0dedcd0-876a-4f11-bca5-9ca4c5fa2378.png"></image>
 <hr>
 <h2>프로그램구조</h2>
-<image src="https://user-images.githubusercontent.com/85157790/165740056-ec6920ee-c696-46ef-b397-c3983ef4c0a5.png"></image>
+<image src="https://user-images.githubusercontent.com/85157790/165740597-b268907d-377c-4c3e-9728-2c0d63b85edf.png"></image>
 <hr>
 <h2>시스템개요</h2>
 
