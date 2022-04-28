@@ -10,8 +10,9 @@
 </ul>
 <hr>
 <h2>사용동영상</h2>
-<iframe id="video" width="" height="" src="https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4" frameborder="0">
-</iframe>
+<video width="100%" height="100%" controls="controls">
+  <source src="https://user-images.githubusercontent.com/85157790/165730193-4a77528f-6696-47e3-bc5c-f2b87ea7c390.mp4" type="video/mp4">
+</video>
 <hr>
 <h2>사용설명</h2>
 
